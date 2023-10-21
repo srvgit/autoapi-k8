@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: main-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/your-org/main-repo.git
+    targetRevision: HEAD
+    path: apps/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
+  directory:
+    recurse: true
+    jsonnet: {}
+  ignoreDifferences:
+  - group: apps/v1
+    kind: Deployment
+    jsonPointers:
+    - /spec/template/spec/containers/0/image

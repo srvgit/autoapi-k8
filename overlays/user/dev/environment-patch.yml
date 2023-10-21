@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-graphlet
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: graphlet
+        image: user-graphlet-image:v1-dev
+        env:
+        - name: ENVIRONMENT
+          value: dev

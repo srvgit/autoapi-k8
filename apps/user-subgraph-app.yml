@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: user-subgraph
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/your-org/user-subgraph-repo.git
+    targetRevision: HEAD
+    path: deploy/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: user-subgraph-namespace
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
+  directory:
+    recurse: true
+    jsonnet: {}
+  ignoreDifferences:
+  - group: apps/v1
+    kind: Deployment
+    jsonPointers:
+    - /spec/template/spec/containers/0/image

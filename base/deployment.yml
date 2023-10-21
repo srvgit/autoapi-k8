@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: generic-graphlet
+  labels:
+    app: graphlet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graphlet
+  template:
+    metadata:
+      labels:
+        app: graphlet
+    spec:
+      containers:
+      - name: graphlet
+        image: generic-graphlet-image:v1
+        ports:
+        - containerPort: 8080

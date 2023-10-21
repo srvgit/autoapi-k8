@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: generic-graphlet
+  labels:
+    app: graphlet
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: graphlet
