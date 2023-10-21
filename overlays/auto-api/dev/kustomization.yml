@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../../../base
+
+bases:
+  - ../base
+
+patchesStrategicMerge:
+  - environment-patch.yaml
+  - environment-patch-hpa.yaml
+  - environment-patch-vpa.yaml  # Include this line for the VPA patch
+
+commonLabels:
+  env: dev
