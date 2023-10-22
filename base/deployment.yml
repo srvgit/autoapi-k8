@@ -20,16 +20,16 @@ spec:
       imagePullSecrets:
       - name: regcred
         ports:
-        - containerPort: 8080
+        - containerPort: 9090
         livenessProbe:
           httpGet:
             path: /healthz
-            port: 8080
+            port: 9090
           initialDelaySeconds: 3
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /readiness
-            port: 8080
+            port: 9090
           initialDelaySeconds: 5
           periodSeconds: 5
