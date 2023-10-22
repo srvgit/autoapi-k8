@@ -5,9 +5,8 @@ resources:
   - ../../../../base
 
 patches:
-  - patch-deployment.yaml
-  - patch-service.yaml
-  - patch-hpa.yaml  # Include this line for the HPA patch
+- patch-deployment.yaml
+- patch-service.yaml
+- patch-hpa.yaml  
 
-commonLabels:
-  app: user-graphlet
+namePrefix: production-
