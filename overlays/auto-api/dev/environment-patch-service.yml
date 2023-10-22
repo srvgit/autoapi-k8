@@ -3,4 +3,4 @@ kind: Service
 metadata:
   name: generic-graphlet-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
