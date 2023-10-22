@@ -8,9 +8,9 @@ resources:
   - ../base
 
 patches:
-  - environment-patch.yaml
-  - environment-patch-hpa.yaml
-  - environment-patch-vpa.yaml  # Include this line for the VPA patch
+- environment-patch.yaml
+- environment-patch-hpa.yaml
+- environment-patch-vpa.yaml  # Include this line for the VPA patch
 
 commonLabels:
   env: dev
