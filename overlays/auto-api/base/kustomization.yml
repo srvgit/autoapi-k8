@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - ../../../../base
 
-patchesStrategicMerge:
+patches:
   - patch-deployment.yaml
   - patch-service.yaml
   - patch-hpa.yaml  # Include this line for the HPA patch
