@@ -4,10 +4,10 @@ kind: Kustomization
 resources:
   - ../../../../base
 
-bases:
+resources:
   - ../base
 
-patchesStrategicMerge:
+patches:
   - environment-patch.yaml
   - environment-patch-hpa.yaml
   - environment-patch-vpa.yaml  # Include this line for the VPA patch
