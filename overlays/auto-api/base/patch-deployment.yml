@@ -8,3 +8,5 @@ spec:
       containers:
       - name: auto-api-graphlet
         image: docker1460/autoapi:latest
+      imagePullSecrets:
+      - name: regcred

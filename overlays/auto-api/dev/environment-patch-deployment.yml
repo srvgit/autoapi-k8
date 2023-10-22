@@ -6,6 +6,8 @@ spec:
   replicas: 2
   template:
     spec:
+      magePullSecrets:
+      - name: regcred
       containers:
       - name: auto-api-graphlet
         image: docker1460/autoapi:latest
