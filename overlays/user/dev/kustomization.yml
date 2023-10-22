@@ -2,15 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../../../base
+  - ../base
 
 resources:
   - ../base
 
 patches:
-- environment-patch.yaml
-- environment-patch-hpa.yaml
-- environment-patch-vpa.yaml  
+- environment-patch.yml
+- enviornment-patch-hpa.yml
+- environment-patch-vpa.yml  
 
 commonLabels:
   env: dev
