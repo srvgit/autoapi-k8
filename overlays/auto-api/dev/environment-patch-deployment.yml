@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: generic-graphlet
 spec:
-  replicas: 2
+  replicas: 1 
   template:
     spec:
       magePullSecrets:
