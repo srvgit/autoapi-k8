@@ -16,9 +16,9 @@ spec:
           value: dev
         livenessProbe:
           httpGet:
-            path: /new-healthz-path
-            port: 8080
+            path: /healthz
+            port: 9090
         readinessProbe:
           httpGet:
-            path: /new-readiness-path
-            port: 8080
+            path: /readiness
+            port: 9090
