@@ -9,7 +9,7 @@ spec:
       imagePullSecrets:
       - name: regcred
       containers:
-      - name: auto-api-graphlet
+      - name: graphlet
         image: docker1460/autoapi:latest
         livenessProbe:
           httpGet:
