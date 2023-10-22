@@ -9,4 +9,4 @@ spec:
       - name: auto-api-graphlet
         image: docker1460/autoapi:latest
       imagePullSecrets:
-      - name: docker-registry-secret
+      - name: regcred

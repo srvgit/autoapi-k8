@@ -18,7 +18,7 @@ spec:
       - name: graphlet
         image: docker1460/autoapi:latest
       imagePullSecrets:
-      - name: docker-registry-secret
+      - name: regcred
         ports:
         - containerPort: 8080
         livenessProbe:
