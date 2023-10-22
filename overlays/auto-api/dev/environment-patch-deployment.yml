@@ -12,3 +12,11 @@ spec:
         env:
         - name: ENVIRONMENT
           value: dev
+        livenessProbe:
+          httpGet:
+            path: /new-healthz-path
+            port: 8080
+        readinessProbe:
+          httpGet:
+            path: /new-readiness-path
+            port: 8080
