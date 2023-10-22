@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/srvgit/autoapi-k8.git
     targetRevision: HEAD
-    path: overlays/user/dev
+    path: overlays/user-graphlet/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: api
