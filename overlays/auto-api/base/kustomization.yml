@@ -11,4 +11,4 @@ patches:
 
 
 commonLabels:
-  app: user-graphlet
+  app: auto-api-graphlet

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: graphlet
-        image: docker1460/autoapi:latest
+        image: docker1460/autoapi
       imagePullSecrets:
       - name: regcred
         ports:
