@@ -3,4 +3,4 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: generic-graphlet-hpa
 spec:
-  minReplicas: 1
+  maxReplicas: 6

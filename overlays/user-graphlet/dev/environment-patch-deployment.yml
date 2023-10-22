@@ -11,9 +11,6 @@ spec:
       containers:
       - name: auto-api-graphlet
         image: docker1460/autoapi:latest
-        env:
-        - name: ENVIRONMENT
-          value: dev
         livenessProbe:
           httpGet:
             path: /healthz
@@ -22,3 +19,7 @@ spec:
           httpGet:
             path: /readiness
             port: 9090
+        env:
+        - name: ENVIRONMENT
+          value: dev
+        

@@ -1,7 +1,7 @@
 apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
 metadata:
-  name: user-graphlet-vpa
+  name: generic-graphlet-vpa
 spec:
   updatePolicy:
     updateMode: "Off"  # In dev, don't auto-update, just provide recommendations

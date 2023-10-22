@@ -9,5 +9,3 @@ patches:
 - path: enviornment-patch-hpa.yml
 - path: environment-patch-vpa.yml
 - path: environment-patch-service.yml
-
-# namePrefix: dev-
