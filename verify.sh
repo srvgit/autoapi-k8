@@ -1,0 +1,1 @@
+kustomize build overlays/auto-api/dev > auto-api-graphlet_delete_me.yml
