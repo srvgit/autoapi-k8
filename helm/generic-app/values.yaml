@@ -1,0 +1,39 @@
+# Values for the parent chart itself (generic-app)
+replicaCount: 1
+image:
+  repository: my-image
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Default values for sub-chart: abc
+abc:
+  replicaCount: 2
+  image:
+    repository: abc-image
+    tag: v1
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+
+# Default values for sub-chart: def
+def:
+  replicaCount: 1
+  image:
+    repository: def-image
+    tag: v1
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+
+# Default values for sub-chart: apollo-router
+apollo-router:
+  replicaCount: 1
+  image:
+    repository: apollo-router-image
+    tag: v1
+    pullPolicy: IfNotPresent
+  service:
+    type: LoadBalancer
+    port: 80

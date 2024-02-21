@@ -1,0 +1,14 @@
+apiVersion: v2
+name: generic-app
+description: A Helm chart for Kubernetes for deploying generic applications and Apollo Router
+version: 0.1.0
+dependencies:
+  - name: abc
+    version: "0.1.0"
+    repository: "file://charts/def"
+  # - name: def
+  #   version: "0.1.0"
+  #   repository: "file://charts/def"
+  # - name: apollo-router
+  #   version: "0.1.0"
+  #   repository: "file://charts/apollo-router"

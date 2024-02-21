@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}-{{ .Values.environment }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.appName }}
+        image: "{{ .Values.router.image.repository }}:{{ .Values.router.image.tag }}"
+        ports:
+        - containerPort: {{ .Values.router.port }}
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/apollo
+      volumes:
+      - name: config-volume
+        configMap:
+          name: {{ .Values.configMap.name }}

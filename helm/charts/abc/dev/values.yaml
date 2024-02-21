@@ -1,0 +1,4 @@
+replicas: 2
+image:
+  tag: "dev-latest"
+environment: dev

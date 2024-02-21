@@ -1,0 +1,11 @@
+appName: abc
+environment: dev
+image:
+  repository: nginx
+  tag: "latest"
+service:
+  type: ClusterIP
+  port: 80
+hpa:
+  minReplicas: 2
+  maxReplicas: 5

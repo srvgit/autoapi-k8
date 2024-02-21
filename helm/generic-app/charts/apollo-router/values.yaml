@@ -1,0 +1,10 @@
+appName: apollo-router
+environment: prod
+image:
+  repository: apollographql/router
+  tag: "latest"
+service:
+  type: LoadBalancer
+  port: 80
+config:
+  # Specific Apollo Router configurations

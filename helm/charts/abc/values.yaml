@@ -1,0 +1,13 @@
+environment: dev
+appName: abc
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+image:
+  repository: example/abc-graphlet
+  tag: "latest"
+hpa:
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80

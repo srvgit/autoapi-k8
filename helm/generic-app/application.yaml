@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: abc-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://git.example.com/path/to/your/repo.git'  # Your Git repository URL
+    targetRevision: HEAD  # Git revision (branch, tag, commit)
+    path: generic-app  # Path within the Git repo to the Helm chart
+    helm:
+      valueFiles:  # List of values files to use
+        - charts/abc/values.yaml
+      parameters:  # Optional: Additional parameters overriding the values in the chart
+        - name: serviceName
+          value: "abc-service"
+  destination:
+    server: 'https://kubernetes.default.svc'  # Cluster URL
+    namespace: default  # Namespace to deploy to
+  syncPolicy:
+    automated:  # Optional: Enable auto-syncing for the application
+      prune: true    # Optional: Enable pruning of resources not defined in git
+      selfHeal: true # Optional: Enable self-healing

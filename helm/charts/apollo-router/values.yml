@@ -1,0 +1,13 @@
+environment: dev
+appName: apollo-router
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+router:
+  image:
+    repository: apollographql/router
+    tag: "latest"
+  port: 8080
+configMap:
+  name: apollo-router-config

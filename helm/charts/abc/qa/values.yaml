@@ -1,0 +1,4 @@
+replicas: 2
+image:
+  tag: "qa-latest"
+environment: qa

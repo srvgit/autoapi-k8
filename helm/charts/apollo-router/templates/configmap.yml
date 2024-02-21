@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap.name }}
+data:
+  supergraph.graphql: |
+    # Placeholder for supergraph schema
+    # Customize this with your actual routing schema
