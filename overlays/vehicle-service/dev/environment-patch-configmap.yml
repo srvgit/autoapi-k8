@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  ENVIRONMENT: "dev"
+  DB_SERVER: "db-dev.vehicle-service.svc.cluster.local"
+  DB_PORT: "5432"
+  DB_NAME: "vehicle_service_dev"
+  DB_SSL_MODE: "prefer"
+  DB_CONNECT_TIMEOUT: "10"
+  DB_STATEMENT_TIMEOUT: "30"

@@ -17,6 +17,9 @@ spec:
       containers:
       - name: graphlet
         image: docker1460/autoapi
+        envFrom:
+        - configMapRef:
+            name: db-config
         ports:
         - containerPort: 9090
         livenessProbe:

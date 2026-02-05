@@ -20,7 +20,5 @@ spec:
             path: /readiness
             port: 9090
         env:
-        - name: ENVIRONMENT
-          value: dev
         - name: GRAPHLET_FEATURES
           value: "user=true,product=false,inventory=true"

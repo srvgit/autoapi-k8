@@ -5,6 +5,7 @@ resources:
   - ../base
 
 patches:
+- path: environment-patch-configmap.yml
 - path: environment-patch-deployment.yml
 - path: environment-patch-hpa.yml
 - path: environment-patch-vpa.yml

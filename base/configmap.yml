@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+  labels:
+    app: graphlet
+data:
+  # Environment differentiator (dev, staging, prod)
+  ENVIRONMENT: "default"
+  # Non-sensitive database connection settings
+  DB_SERVER: ""
+  DB_PORT: "5432"
+  DB_NAME: ""
+  DB_SSL_MODE: "prefer"
+  # Optional: connection pool / timeouts (non-sensitive)
+  DB_CONNECT_TIMEOUT: "10"
+  DB_STATEMENT_TIMEOUT: "30"
