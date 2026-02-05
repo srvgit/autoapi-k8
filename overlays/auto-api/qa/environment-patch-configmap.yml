@@ -4,7 +4,7 @@ metadata:
   name: db-config
 data:
   ENVIRONMENT: "qa"
-  DB_SERVER: "db-qa.autoapi.svc.cluster.local"
+  DB_SERVER: "db-prod.autoapi.svc.cluster.local"
   DB_PORT: "5432"
   DB_NAME: "autoapi_qa"
   DB_SSL_MODE: "prefer"
